@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="350dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="485dp"
+    android:background="@color/colorPrimaryDark"
+    app:cardBackgroundColor="@android:color/white"
+    app:cardCornerRadius="6dp"
+    app:cardElevation="5dp"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/callicon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_001_coronavirus" />
+
+        <RelativeLayout
+            android:id="@+id/radioGroup1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/calltitle"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp">
+<!--            <ImageView-->
+<!--                android:id="@+id/phoneContact"-->
+<!--                android:layout_width="20dp"-->
+<!--                android:layout_height="20dp"-->
+<!--                android:layout_alignParentEnd="true"-->
+<!--                android:src="@drawable/ic_contact_book" />-->
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Suspect Name"
+                android:singleLine="true"
+                android:imeOptions="actionNext"
+                android:id="@+id/contactName"/>
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Suspect Address"
+                android:id="@+id/contactAddress"
+                android:singleLine="true"
+                android:imeOptions="actionNext"
+                android:layout_below="@+id/contactName"/>
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Suspect's Phone"
+                android:inputType="textPhonetic"
+                android:id="@+id/contactPhone"
+                android:singleLine="true"
+                android:imeOptions="actionNext"
+                android:layout_below="@+id/contactAddress"/>
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Description"
+                android:minLines="2"
+                android:singleLine="true"
+                android:imeOptions="actionNext"
+                android:id="@+id/description"
+                android:layout_below="@+id/contactPhone"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Reporting Person"
+                android:id="@+id/reportingPerson"
+                android:singleLine="true"
+                android:imeOptions="actionNext"
+                android:layout_below="@+id/description"/>
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPhonetic"
+                android:singleLine="true"
+                android:imeOptions="actionNext"
+                android:hint="Reporting Person's Number"
+                android:id="@+id/reportingContact"
+                android:layout_below="@+id/reportingPerson"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/radioGroup1"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp">
+
+            <ImageView
+                android:id="@+id/saveOk"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/ic_correct"></ImageView>
+
+
+            <ImageView
+                android:id="@+id/saveNOk"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="65dp"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/ic_remove"></ImageView>
+
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/calltitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Report Suspects"
+            android:textColor="@color/design_default_color_primary_dark"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

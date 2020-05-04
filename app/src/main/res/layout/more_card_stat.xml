@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<androidx.cardview.widget.CardView android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="10dp"
+    android:layout_height="150dp"
+    app:cardBackgroundColor="@android:color/white"
+    app:cardCornerRadius="6dp"
+    app:cardElevation="5dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="References n Suppport"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:id="@+id/cardTitle"
+        android:textColor="@color/bg_screen2"/>
+    <ImageView
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:src="@drawable/ic_033_statistics"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="35dp"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Updated: Mar 28 14:26"
+            android:id="@+id/updatedDate"
+            android:layout_marginLeft="15dp"
+            />
+
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Supported By: "
+        android:layout_below="@+id/updatedDate"
+            android:id="@+id/supporttext"
+        android:layout_marginLeft="15dp"
+        />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nyaya Health Nepal"
+            android:id="@+id/supportinCompany"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:layout_below="@+id/updatedDate"
+            android:layout_toRightOf="@+id/supporttext"
+            android:layout_marginLeft="15dp"
+            />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/supportinCompany">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Reference:     "
+                android:id="@+id/referenceText"
+                android:layout_marginLeft="15dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="MOHP Nepal"
+                android:id="@+id/ref1"
+                android:textStyle="bold"
+                android:layout_toRightOf="@+id/referenceText"
+                android:layout_marginLeft="15dp"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" and "
+                android:id="@+id/ref2"
+                android:layout_toRightOf="@+id/ref1"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="WorldOMeter"
+                android:textStyle="bold"
+                android:id="@+id/ref3"
+                android:layout_toRightOf="@+id/ref2"/>
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,369 @@
+<androidx.cardview.widget.CardView
+
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="10dp"
+    android:layout_height="400dp"
+    app:cardBackgroundColor="@android:color/white"
+    app:cardCornerRadius="6dp"
+    app:cardElevation="5dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_margin="4dp"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/ic_038_cough"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Symptoms"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/ageText"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="@color/bg_screen2"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_below="@id/ageText"
+            android:layout_marginTop="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.25"
+                    android:layout_height="wrap_content"
+                    style="@style/cardText"
+                    android:text="@string/breathing"/>
+                <Button
+                    android:layout_width="0dp"
+                    android:id="@+id/btn13"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.3"
+
+                    android:text="@string/low"
+                    android:onClick="setSymptoms"
+                    android:tag="1,low"
+                    />
+
+
+                <Button
+                    android:layout_width="0dp"
+                    android:id="@+id/btn14"
+
+                    
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.3"
+
+
+                    android:text="@string/med"
+                    android:onClick="setSymptoms"
+                    android:tag="1,med"/>
+
+
+                <Button
+                    android:layout_width="0dp"
+                    android:id="@+id/btn15"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.3"
+
+                    android:text="@string/high"
+                    android:onClick="setSymptoms"
+                    android:tag="1,high"/>
+
+
+            </LinearLayout>
+                    <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.25"
+                    android:layout_height="wrap_content"
+                    style="@style/cardText"
+                    android:text="@string/cough"/>
+
+                <Button
+                    android:layout_width="0dp"
+                    android:id="@+id/btn16"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.3"
+                    
+                    
+
+                    android:text="@string/low"
+                    android:onClick="setSymptoms"
+                    android:tag="2,low"/>
+
+
+                <Button
+                    android:layout_width="0dp"
+                    android:id="@+id/btn17"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.3"
+
+                    android:text="@string/med"
+                    android:onClick="setSymptoms"
+                    android:tag="2,med"/>
+
+
+                <Button
+                    android:layout_width="0dp"
+                    android:id="@+id/btn18"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.3"
+
+                    android:text="@string/high"
+                    android:onClick="setSymptoms"
+                    android:tag="2,high"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.25"
+                android:layout_height="wrap_content"
+                style="@style/cardText"
+                android:text="@string/smell"/>
+            <Button
+                android:layout_width="0dp"
+                android:id="@+id/btn19"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+
+
+                    android:text="@string/low"
+                    android:onClick="setSymptoms"
+                    android:tag="3,low"/>
+
+
+            <Button
+                android:layout_width="0dp"
+                android:id="@+id/btn20"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+
+
+                    android:text="@string/med"
+                    android:onClick="setSymptoms"
+                    android:tag="3,med"/>
+
+
+            <Button
+                android:layout_width="0dp"
+                android:id="@+id/btn21"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+
+
+                    android:text="@string/high"
+                    android:onClick="setSymptoms"
+                    android:tag="3,high"/>
+
+
+        </LinearLayout>
+
+            <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.25"
+                android:layout_height="wrap_content"
+                style="@style/cardText"
+                android:text="@string/sore"/>
+            <Button
+                android:layout_width="0dp"
+                android:id="@+id/btn22"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+
+
+                    android:text="@string/low"
+                    android:onClick="setSymptoms"
+                    android:tag="4,low"/>
+
+
+            <Button
+                android:layout_width="0dp"
+                android:id="@+id/btn23"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+
+                    android:text="@string/med"
+                    android:onClick="setSymptoms"
+                    android:tag="4,med"/>
+
+
+            <Button
+                android:layout_width="0dp"
+                android:id="@+id/btn24"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+
+
+                    android:text="@string/high"
+                    android:onClick="setSymptoms"
+                    android:tag="4,high"/>
+
+
+        </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.25"
+                    android:layout_height="wrap_content"
+                    style="@style/cardText"
+                    android:text="@string/weakness"/>
+                <Button
+                    android:layout_width="0dp"
+                    android:id="@+id/btn25"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.3"
+
+                    android:text="@string/low"
+                    android:onClick="setSymptoms"
+                    android:tag="5,low"/>
+
+
+                <Button
+                    android:layout_width="0dp"
+                    android:id="@+id/btn26"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.3"
+
+                    android:text="@string/med"
+                    android:onClick="setSymptoms"
+                    android:tag="5,med"/>
+
+
+                <Button
+                    android:layout_width="0dp"
+                    android:id="@+id/btn27"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.3"
+
+                    android:text="@string/high"
+                    android:onClick="setSymptoms"
+                    android:tag="5,high"/>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.25"
+                    android:layout_height="wrap_content"
+                    style="@style/cardText"
+                    android:text="@string/appetite"/>
+                <Button
+                    android:layout_width="0dp"
+                    android:id="@+id/btn28"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.3"
+
+
+                    android:text="@string/low"
+                    android:onClick="setSymptoms"
+                    android:tag="6,low"/>
+
+
+                <Button
+                    android:layout_width="0dp"
+                    android:id="@+id/btn29"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.3"
+
+
+                    android:text="@string/med"
+                    android:onClick="setSymptoms"
+                    android:tag="6,med"/>
+
+
+                <Button
+                    android:layout_width="0dp"
+                    android:id="@+id/btn30"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.3"
+
+                    android:text="@string/high"
+                    android:onClick="setSymptoms"
+                    android:tag="6,high"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.25"
+                    android:layout_height="wrap_content"
+                    style="@style/cardText"
+                    android:text="@string/chest"/>
+                <Button
+                    android:layout_width="0dp"
+                    android:id="@+id/btn31"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.3"
+
+
+                    android:text="@string/low"
+                    android:onClick="setSymptoms"
+                    android:tag="7,low"/>
+
+
+                <Button
+                    android:layout_width="0dp"
+                    android:id="@+id/btn32"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.3"
+
+
+                    android:text="@string/med"
+                    android:onClick="setSymptoms"
+                    android:tag="7,med"/>
+
+
+                <Button
+                    android:layout_width="0dp"
+                    android:id="@+id/btn33"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.3"
+
+                    android:text="@string/high"
+                    android:onClick="setSymptoms"
+                    android:tag="7,high"/>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

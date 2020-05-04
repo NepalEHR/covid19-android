@@ -1,0 +1,111 @@
+<androidx.cardview.widget.CardView
+
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="10dp"
+    android:layout_height="200dp"
+    app:cardBackgroundColor="@android:color/white"
+    app:cardCornerRadius="6dp"
+    app:cardElevation="5dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_margin="4dp"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/ic_031_airplane"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Travel Information"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/travelText"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="@color/bg_screen2"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/travelText"
+            android:layout_marginTop="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:id="@+id/ageGrp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.25"
+                    android:layout_height="wrap_content"
+                    style="@style/cardText"
+                    android:text=""/>
+
+                <Button
+                    android:id="@+id/btn10"
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.75"
+                    android:onClick="setTravelLevel"
+                    android:tag="Low"
+                    android:text="No Travel History" />
+
+
+
+
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:id="@+id/genderGrp"
+                android:layout_below="@id/ageGrp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.25"
+                    android:layout_height="wrap_content"
+                    style="@style/cardText"/>
+                <Button
+                    android:layout_width="0dp"
+                    android:id="@+id/btn11"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.75"
+                    android:onClick="setTravelLevel"
+                    android:tag="Med"
+                    android:text="Foreign return"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_below="@id/genderGrp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.25"
+                    android:layout_height="wrap_content"
+                    style="@style/cardText"/>
+                <Button
+                    android:layout_width="0dp"
+                    android:id="@+id/btn12"
+                    android:onClick="setTravelLevel"
+                    android:tag="High"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.75"
+                    android:text="In contact with foreign return"/>
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

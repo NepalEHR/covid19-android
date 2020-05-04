@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<androidx.cardview.widget.CardView android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="10dp"
+    android:layout_height="120dp"
+    app:cardBackgroundColor="@android:color/white"
+    app:cardCornerRadius="6dp"
+    app:cardElevation="5dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/hosRelative">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:id="@+id/iconId"
+            android:src="@drawable/ic_010_hospital"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bayalpata Hospital"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/hospitalName"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="@color/bg_screen2"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_home"
+            android:layout_alignParentEnd="true"
+            android:layout_marginLeft="35dp"/>
+        <!--        <LinearLayout-->
+<!--            android:layout_below="@+id/iconId"-->
+<!--            android:id="@+id/linearLine1"-->
+<!--            android:layout_marginTop="15dp"-->
+<!--            android:layout_marginLeft="15dp"-->
+<!--            android:layout_marginRight="15dp"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="50dp"-->
+<!--            android:orientation="horizontal">-->
+<!--            <RelativeLayout-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_weight="1"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:orientation="vertical">-->
+<!--                <ImageView-->
+<!--                    android:layout_width="15dp"-->
+<!--                    android:layout_height="15dp"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:layout_marginRight="3dp"-->
+<!--                    android:layout_alignParentBottom="true"-->
+<!--                    android:layout_toLeftOf="@+id/totalScreened"-->
+<!--                    android:src="@drawable/ic_screened"/>-->
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:text="Screened"-->
+<!--                    style="@style/statTitle"-->
+<!--                    android:layout_centerHorizontal="true"-->
+<!--                    android:layout_alignParentBottom="true"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:textSize="10sp"-->
+<!--                    android:id="@+id/totalScreened"-->
+<!--                    />-->
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_centerHorizontal="true"-->
+<!--                    android:id="@+id/screenText"-->
+<!--                    android:textColor="@color/white_fade"-->
+<!--                    android:backgroundTint="@color/stat_screen3"-->
+<!--                    style="@style/cardText"-->
+<!--                    android:gravity="center"-->
+<!--                    android:background="@drawable/circle_drawable"-->
+<!--                    android:text="0"/>-->
+<!--            </RelativeLayout>-->
+
+<!--            <RelativeLayout-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_weight="1"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_marginLeft="10dp"-->
+<!--                android:orientation="vertical">-->
+<!--                <ImageView-->
+<!--                    android:layout_width="15dp"-->
+<!--                    android:layout_height="15dp"-->
+<!--                    android:layout_marginRight="3dp"-->
+<!--                    android:layout_alignParentBottom="true"-->
+<!--                    android:layout_toLeftOf="@+id/totalPostive"-->
+<!--                    android:src="@drawable/ic_blood"/>-->
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:text="Samples"-->
+<!--                    style="@style/statTitle"-->
+<!--                    android:layout_centerHorizontal="true"-->
+<!--                    android:layout_alignParentBottom="true"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:textSize="10sp"-->
+<!--                    android:id="@+id/totalPostive"-->
+<!--                    />-->
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_centerHorizontal="true"-->
+
+<!--                    android:background="@drawable/circle_drawable"-->
+<!--                    android:gravity="center"-->
+<!--                    android:foregroundGravity="center"-->
+<!--                    android:textColor="@color/white_fade"-->
+<!--                    android:backgroundTint="@color/stat_screen4"-->
+<!--                    android:id="@+id/sampleText"-->
+<!--                    style="@style/cardText"-->
+<!--                    android:text="0"/>-->
+<!--            </RelativeLayout>-->
+
+<!--            <RelativeLayout-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_weight="1"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_marginLeft="10dp"-->
+<!--                android:orientation="vertical">-->
+<!--                <ImageView-->
+<!--                    android:layout_width="15dp"-->
+<!--                    android:layout_height="15dp"-->
+<!--                    android:layout_alignParentBottom="true"-->
+<!--                    android:layout_toLeftOf="@+id/totalNegative"-->
+<!--                    android:layout_marginRight="3dp"-->
+<!--                    android:src="@drawable/ic_isolation"/>-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/totalNegative"-->
+<!--                    style="@style/statTitle"-->
+<!--                    android:layout_alignParentBottom="true"-->
+<!--                    android:layout_centerHorizontal="true"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Suspected"-->
+<!--                    android:textSize="10sp" />-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_centerHorizontal="true"-->
+
+<!--                    android:background="@drawable/circle_drawable"-->
+<!--                    android:gravity="center"-->
+<!--                    android:foregroundGravity="center"-->
+<!--                    android:textColor="@color/white_fade"-->
+<!--                    android:backgroundTint="@color/stat_screen5"-->
+<!--                    android:id="@+id/suspectedText"-->
+<!--                    style="@style/cardText"-->
+<!--                    android:text="0"/>-->
+<!--            </RelativeLayout>-->
+
+
+
+
+
+<!--        </LinearLayout>-->
+        <LinearLayout
+            android:layout_marginTop="55dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:layout_below="@+id/linearLine1">
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="3dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toLeftOf="@+id/totalScreened"
+                    android:src="@drawable/ic_screened"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="Screened"
+                    style="@style/statTitle"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_height="wrap_content"
+                    android:textSize="10sp"
+                    android:id="@+id/totalScreened"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/screenText"
+                    android:textColor="@color/white_fade"
+                    android:backgroundTint="@color/stat_screen3"
+                    style="@style/cardText"
+                    android:gravity="center"
+                    android:background="@drawable/circle_drawable"
+                    android:text="0"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_marginRight="3dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toLeftOf="@+id/totalQuarantined"
+                    android:src="@drawable/ic_positive"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="Positive"
+                    style="@style/statTitle"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_height="wrap_content"
+                    android:textSize="10sp"
+                    android:id="@+id/totalQuarantined"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_centerHorizontal="true"
+
+                    android:background="@drawable/circle_drawable"
+                    android:gravity="center"
+                    android:textColor="@color/white_fade"
+                    android:backgroundTint="@color/stat_screen1"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/positiveText"
+                    style="@style/cardText"
+                    android:text="0"/>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="10dp"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginRight="3dp"
+                    android:layout_toLeftOf="@+id/totalIsolated"
+                    android:src="@drawable/ic_negative"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="Negative"
+                    style="@style/statTitle"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_height="wrap_content"
+                    android:textSize="10sp"
+                    android:id="@+id/totalIsolated"
+                    />
+
+                <TextView
+                    android:id="@+id/negativeText"
+                    style="@style/cardText"
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/circle_drawable"
+                    android:backgroundTint="@color/stat_screen2"
+                    android:foregroundGravity="center"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@color/white_fade" />
+            </RelativeLayout>
+
+
+
+
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

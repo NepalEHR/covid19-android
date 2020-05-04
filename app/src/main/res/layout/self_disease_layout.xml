@@ -1,0 +1,161 @@
+<androidx.cardview.widget.CardView
+
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="10dp"
+    android:layout_height="200dp"
+    app:cardBackgroundColor="@android:color/white"
+    app:cardCornerRadius="6dp"
+    app:cardElevation="5dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_margin="4dp"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/ic_010_hospital"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Patient History"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/ageText"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="@color/bg_screen2"/>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/ageText"
+            android:layout_marginTop="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.20"/>
+                <Button
+                    android:layout_width="0dp"
+                    android:id="@+id/btn34"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.33"
+                    android:onClick="setDisease"
+                    android:tag="1"
+                    android:text="@string/diabetes"/>
+
+                <Button
+                    android:id="@+id/btn35"
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.3"
+                    android:onClick="setDisease"
+                    android:tag="2"
+                    android:text="@string/BP" />
+
+
+                <Button
+                    android:layout_width="0dp"
+                    android:id="@+id/btn36"
+                    android:onClick="setDisease"
+                    android:tag="3"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.3"
+                    android:text="@string/heart"/>
+
+
+
+
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.20"/>
+                <Button
+                    android:layout_width="0dp"
+                    android:id="@+id/btn37"
+                    android:onClick="setDisease"
+                    android:tag="4"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.33"
+                    android:text="@string/kidney"/>
+                <Button
+                    android:layout_width="0dp"
+                    android:id="@+id/btn38"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.3"
+                    android:onClick="setDisease"
+                    android:tag="5"
+                    android:text="@string/lung"/>
+
+                <Button
+                    android:layout_width="0dp"
+                    android:id="@+id/btn39"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.3"
+                    android:onClick="setDisease"
+                    android:tag="6"
+                    android:text="@string/stroke"/>
+
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.20"/>
+
+                <Button
+                    android:layout_width="0dp"
+                    android:id="@+id/btn40"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.33"
+                    android:onClick="setDisease"
+                    android:tag="7"
+                    android:text="@string/immunity"/>
+
+
+                <Button
+                    android:layout_width="0dp"
+                    android:id="@+id/btn41"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.3"
+                    android:onClick="setDisease"
+                    android:tag="8"
+                    android:text="@string/cancer"/>
+
+
+                <Button
+                    android:layout_width="0dp"
+                    android:id="@+id/btn42"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.33"
+                    android:onClick="setDisease"
+                    android:tag="9"
+                    android:text="@string/none"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

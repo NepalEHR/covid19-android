@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<androidx.cardview.widget.CardView android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="10dp"
+    android:layout_height="200dp"
+    app:cardBackgroundColor="@android:color/white"
+    app:cardCornerRadius="6dp"
+    app:cardElevation="5dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
+      <ImageView
+          android:layout_width="35dp"
+          android:layout_height="35dp"
+          android:id="@+id/iconId"
+          android:src="@drawable/ic_001_coronavirus"/>
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/symptoms"
+          android:layout_centerHorizontal="true"
+          android:textStyle="bold"
+          android:textSize="16sp"
+          android:textColor="@color/bg_screen2"/>
+      <LinearLayout
+          android:layout_below="@+id/iconId"
+          android:id="@+id/linearLine1"
+          android:layout_marginTop="15dp"
+          android:layout_marginLeft="15dp"
+          android:layout_marginRight="15dp"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal">
+         <LinearLayout
+             android:layout_width="0dp"
+             android:layout_weight="1"
+             android:layout_height="wrap_content"
+             android:orientation="vertical">
+             <ImageView
+                 android:layout_width="35dp"
+                 android:layout_height="35dp"
+                 android:layout_gravity="center"
+                 android:src="@drawable/ic_025_sore_throat"/>
+             <TextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_gravity="center"
+                 style="@style/cardText"
+                 android:text="@string/sore"/>
+         </LinearLayout>
+
+
+          <LinearLayout
+              android:layout_width="0dp"
+              android:layout_weight="1"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="10dp"
+              android:orientation="vertical">
+              <ImageView
+                  android:layout_width="35dp"
+                  android:layout_height="35dp"
+                  android:layout_gravity="center"
+                  android:src="@drawable/ic_038_cough"/>
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="center"
+                  style="@style/cardText"
+                  android:text="@string/cough"/>
+          </LinearLayout>
+
+
+          <LinearLayout
+              android:layout_width="0dp"
+              android:layout_weight="1"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="10dp"
+              android:orientation="vertical">
+              <ImageView
+                  android:layout_width="35dp"
+                  android:layout_height="35dp"
+                  android:layout_gravity="center"
+                  android:src="@drawable/ic_028_runny_nose"/>
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="center"
+                  style="@style/cardText"
+                  android:text="@string/nose"/>
+          </LinearLayout>
+
+
+          <LinearLayout
+              android:layout_width="0dp"
+              android:layout_weight="1"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="10dp"
+              android:orientation="vertical">
+
+              <ImageView
+                  android:layout_width="35dp"
+                  android:layout_height="35dp"
+                  android:layout_gravity="center"
+                  android:src="@drawable/ic_046_headache"/>
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="center"
+                  style="@style/cardText"
+                  android:text="@string/head"/>
+
+
+          </LinearLayout>
+
+      </LinearLayout>
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal"
+          android:layout_marginRight="15dp"
+          android:layout_marginTop="25dp"
+          android:layout_below="@+id/linearLine1">
+          <LinearLayout
+              android:layout_width="0dp"
+              android:layout_weight="0.25"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="10dp"
+              android:orientation="vertical">
+              <ImageView
+                  android:layout_width="35dp"
+                  android:layout_height="35dp"
+                  android:layout_gravity="center"
+                  android:src="@drawable/ic_022_fever"/>
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="center"
+                  style="@style/cardText"
+                  android:text="@string/fever"/>
+          </LinearLayout>
+
+          <LinearLayout
+              android:layout_width="0dp"
+              android:layout_weight="0.25"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="10dp"
+              android:orientation="vertical">
+
+              <ImageView
+                  android:layout_width="35dp"
+                  android:layout_height="35dp"
+                  android:layout_gravity="center"
+                  android:src="@drawable/ic_017_difficulty_breathing"/>
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="center"
+                  style="@style/cardText"
+                  android:text="@string/dbreathing"/>
+          </LinearLayout>
+          <LinearLayout
+              android:layout_width="0dp"
+              android:layout_weight="0.5"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="10dp"
+              android:orientation="vertical">
+
+          </LinearLayout>
+
+      </LinearLayout>
+
+
+
+  </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

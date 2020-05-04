@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="10dp"
+    android:layout_height="160dp"
+    app:cardBackgroundColor="@android:color/white"
+    app:cardCornerRadius="6dp"
+    app:cardElevation="5dp"
+    android:id="@+id/newsFeeds"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout
+        android:layout_margin="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:id="@+id/newsPortalIcon"
+            android:src="@drawable/ic_001_coronavirus"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mar 31"
+            android:id="@+id/newsDate"
+            android:layout_below="@+id/newsPortalIcon"
+            android:textSize="10sp"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/newsTitle"
+            android:layout_toRightOf="@+id/newsPortalIcon"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/colorAccent"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:id="@+id/newsDescription"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/newsPortalIcon"
+            android:layout_below="@+id/newsTitle"
+            android:textSize="10sp"
+            android:text=""
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/newsProvider"
+            android:layout_alignParentEnd="true"
+            android:text="BBC"
+            android:layout_marginRight="30dp"
+            android:textStyle="bold"
+            android:layout_below="@+id/newsDescription"
+            android:textSize="15sp"
+            android:textColor="@color/colorPrimaryDark"
+            />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/share"
+            android:layout_below="@+id/newsDescription"
+            android:tint="@color/bg_screen2"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/newsPortalIcon"
+            android:src="@android:drawable/ic_menu_share"/>
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">कोभिड 19</string>
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"स्वागतम् !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+
+    <string name="title_activity_fullscreen">COVID 19</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+
+    <string name="home_second">Home Second</string>
+
+    <string name="slide_1_title">धुनुहोस्</string>
+    <string name="slide_1_desc">कम्तिमा २० सेकेन्डको लागि आफ्नो हात धुनुहोस् र सकेसम्म मानवीय सम्पर्कबाट टाढा रहनुहोस्!</string>
+
+    <string name="slide_2_title">क्वारेन्टिन</string>
+    <string name="slide_2_desc">आपतकालिन नभएसम्म घरबाट बाहिर नजानुहोस्!</string>
+
+    <string name="slide_3_title">एकान्तबास  बसौ</string>
+    <string name="slide_3_desc">आफैलाई अलग गर्नुहोस् यदि तपाईं COVID 19 लक्षणहरू मध्ये कुनै पाउनु भयो भने!</string>
+
+    <string name="slide_4_title">बेवास्ता गर्नुहोस्</string>
+    <string name="slide_4_desc">नक्कली समाचार उपेक्षा गर्नुहोस् र WHO र तपाइँको सरकार अनुसरण गर्नुहोस्!</string>
+
+    <string name="next">अर्को</string>
+    <string name="skip">छोड्नुहोस्</string>
+    <string name="start">बुझे</string>
+
+
+    <string name="base_url" translatable="false">http://api.digitalstudy.com.np/</string>
+    <string name="base_url_nehr" translatable="false">http://covid19.nepalehr.org/</string>
+    <string name="base_url_ninja" translatable="false">https://corona.lmao.ninja/</string>
+    <string name="msg_error">केही गलत भयो। कृपया पछि पुन: प्रयास गर्नुहोस्।</string>
+    <string name="msg_progress_fetching_data">लोड हुँदै...</string>
+    <string name="msg_progress_posting_suspect">संदिग्ध रिपोर्ट गर्दै। कृपया पर्खनुहोस्!!!</string>
+
+    <string name="start_updates">स्थान अपडेट सुरू गर्नुहोस्</string>
+
+
+    <string name="low">छैन </string>
+    <string name="med">हल्का</string>
+    <string name="high">उच्च</string>
+
+
+    <string name="cough">सुख्खा खोकी</string>
+    <string name="nose">रुघा </string>
+    <string name="fever">उच्च ज्वरो</string>
+    <string name="head">टाउको दुखाइ</string>
+    <string name="smell">गन्ध / स्वाद क्षति</string>
+    <string name="sore">घन्टी दुख्ने </string>
+    <string name="weakness">कमजोरी</string>
+    <string name="appetite">भोक नलाग्नु </string>
+    <string name="chest">छातीको दुखाइ</string>
+    <string name="breathing">सास फेर्न समस्या</string>
+    <string name="dbreathing">सास फेर्न समस्या</string>
+
+
+
+    <string name="washHand">हात धुनुहोस्</string>
+    <string name="wearMask">मास्क लगाउनुहोस्</string>
+    <string name="avoidTravel">यात्रा नगर्नुहोस्</string>
+    <string name="stayHome">घरमै बसौ</string>
+    <string name="isolate">एकान्तबास  बसौ</string>
+
+
+
+    <string name="diabetes">मधुमेह</string>
+    <string name="BP">रक्तचाप</string>
+    <string name="heart">मुटु</string>
+    <string name="kidney">मृगौला</string>
+    <string name="lung">फोक्सो </string>
+    <string name="stroke">हृदयघात</string>
+    <string name="immunity">प्रतिरक्षा</string>
+    <string name="cancer">क्यान्सर</string>
+
+    <string name="none">छैन</string>
+
+    <string name="information">
+    तपाई कम जोखिममा भएता पनि ,यो  भाइरस धेरै संक्रामक छ  र यस समयमा हामी तपाईलाई घरमा बस्न सल्लाह दिन्छौं।
+\n1. घरमै बस
+     \n2. सकारात्मक रहनुहोस्
+     \n3।. धेरै पानी पिउनुहोस्
+     \n4. भिटामिन सी खानु
+     \n5. डोनट तपाईंको सापेक्ष भेट
+     \n6. स्वस्थ रह
+     \n7. नियमित घर व्यायाम
+     \n8. ब्रेक लिनुहोस्
+</string>
+    <string name="stop_updates">स्थान अपडेट गर्नुहोस्</string>
+    <string name="get_last_location">अन्तिम स्थान पाउनुहोस्</string>
+
+    <string-array name="relative">
+        <item>Relation</item>
+        <item>Relative</item>
+        <item>Friend</item>
+        <item>Colleague</item>
+        <item>Other</item>
+    </string-array>
+
+
+
+    <string name="scenario">परिदृश्य</string>
+    <string name="symptoms">लक्षण</string>
+    <string name="todos">गर्नु पर्ने</string>
+
+    <string name="confirmed">पुष्टी भएको </string>
+    <string name="death">मृत्यु </string>
+    <string name="recovered">निको भएको </string>
+
+
+    <string name="splashTitle1">कोभिड 19: मानव जातिको लागि चुनौती</string>
+    <string name="splashTitle2">सँगै हामी गर्न सक्छौं!!!</string>
+</resources>
