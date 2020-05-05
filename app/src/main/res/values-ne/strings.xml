@@ -45,9 +45,9 @@
     <string name="start">बुझे</string>
 
 
-    <string name="base_url" translatable="false">http://api.digitalstudy.com.np/</string>
+    <string name="base_url" translatable="false">http://api.sudishrestha.com.np/</string>
     <string name="base_url_nehr" translatable="false">http://covid19.nepalehr.org/</string>
-    <string name="base_url_ninja" translatable="false">https://corona.lmao.ninja/</string>
+    <string name="base_url_ninja" translatable="false">https://corona.lmao.ninja/v2/</string>
     <string name="msg_error">केही गलत भयो। कृपया पछि पुन: प्रयास गर्नुहोस्।</string>
     <string name="msg_progress_fetching_data">लोड हुँदै...</string>
     <string name="msg_progress_posting_suspect">संदिग्ध रिपोर्ट गर्दै। कृपया पर्खनुहोस्!!!</string>

@@ -44,7 +44,7 @@
     <string name="start">GOT IT</string>
 
 
-    <string name="base_url" translatable="false">http://api.digitalstudy.com.np/</string>
+    <string name="base_url" translatable="false">http://api.sudishrestha.com.np/</string>
     <string name="base_url_nehr" translatable="false">http://covid19.nepalehr.org/</string>
     <string name="base_url_ninja" translatable="false">https://corona.lmao.ninja/v2/</string>
     <string name="msg_error">Something went wrong.Please try again later.</string>
