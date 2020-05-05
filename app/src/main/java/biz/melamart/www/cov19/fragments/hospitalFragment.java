@@ -110,7 +110,7 @@ public class hospitalFragment extends Fragment implements hospitalInterface {
         hospitalDataList.add(hospitalData);
 
         hospitalData = new hospitalData();
-        hospitalData.setHospitalName("Chaurmandu Hospital");
+        hospitalData.setHospitalName("Chaurpati PHC");
         hospitalDataList.add(hospitalData);
 
         mAdapter.notifyDataSetChanged();
@@ -207,7 +207,7 @@ public class hospitalFragment extends Fragment implements hospitalInterface {
             Nepalehr nepalehr = COVSettings.getInstance().getDolakhaData();
             hospitalData hosData = new hospitalData();
             hosData.setHospitalName("Charikot Hospital");
-            hosData.setDashUrl("http://covid19.nepalehr.org/public/dashboards/Yv3xoV5kb2JIJ677CaPRMRbXPZe755ALthnBFqVX?org_slug=default");
+            hosData.setDashUrl("http://covid19.nepalehr.org/public/dashboards/mvUqhwzomnEDBeld4BgJqz3TNCN32adHmH72dbFx?org_slug=default");
             int total = extractData(nepalehr.getQueryResult().getData().getRows().get(0).getNumbers()) + extractData(nepalehr.getQueryResult().getData().getRows().get(1).getNumbers()) + extractData(nepalehr.getQueryResult().getData().getRows().get(2).getNumbers()) + extractData(nepalehr.getQueryResult().getData().getRows().get(3).getNumbers());
             int positive = extractData(nepalehr.getQueryResult().getData().getRows().get(0).getNumbers()) + extractData(nepalehr.getQueryResult().getData().getRows().get(2).getNumbers());
             int negative = extractData(nepalehr.getQueryResult().getData().getRows().get(1).getNumbers()) + extractData(nepalehr.getQueryResult().getData().getRows().get(3).getNumbers());
@@ -233,9 +233,8 @@ public class hospitalFragment extends Fragment implements hospitalInterface {
         if (COVSettings.getInstance().getChaurmanduData() != null) {
             Nepalehr nepalehr = COVSettings.getInstance().getChaurmanduData();
             hospitalData hosData = new hospitalData();
-            hosData.setHospitalName("Chaurmandu Hospital");
-            hosData.setDashUrl("http://covid19.nepalehr.org/public/dashboards/mvUqhwzomnEDBeld4BgJqz3TNCN32adHmH72dbFx?org_slug=default");
-
+            hosData.setHospitalName("Chaurpati PHC");
+            hosData.setDashUrl("http://covid19.nepalehr.org/public/dashboards/Yv3xoV5kb2JIJ677CaPRMRbXPZe755ALthnBFqVX?org_slug=default");
 
             int total = extractData(nepalehr.getQueryResult().getData().getRows().get(0).getNumbers()) + extractData(nepalehr.getQueryResult().getData().getRows().get(1).getNumbers()) + extractData(nepalehr.getQueryResult().getData().getRows().get(2).getNumbers()) + extractData(nepalehr.getQueryResult().getData().getRows().get(3).getNumbers());
             int positive = extractData(nepalehr.getQueryResult().getData().getRows().get(0).getNumbers()) + extractData(nepalehr.getQueryResult().getData().getRows().get(2).getNumbers());

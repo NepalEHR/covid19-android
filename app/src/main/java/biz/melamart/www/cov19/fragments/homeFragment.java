@@ -187,15 +187,15 @@ public class homeFragment extends Fragment implements statViewUpdateListner {
         int totalInActiveCase = totalDeath + totalRecovered;
 
         float er = ((totalCases/ 7000000000f)*100);
-        float dr = ((Float.parseFloat(totalDeath+"")/ totalInActiveCase)*100f);
-        float rr = ((Float.parseFloat(totalRecovered+"")/ totalInActiveCase)*100f);
+        float dr = ((Float.parseFloat(totalDeath+"")/ totalCases)*100f);
+        float rr = ((Float.parseFloat(totalRecovered+"")/ totalCases)*100f);
 
         txtTotalEffected.setText(totalCases+"");
         txtTotaldeath.setText(totalDeath+"");
         txtTotalrecovered.setText(totalRecovered+"");
-        txtTotalEffectedRatio.setText(String.format("%.02f", er)+"%");
-        txtTotaldeathRatio.setText(String.format("%.02f", dr)+"%");
-        txtTotalrecoveredRatio.setText(String.format("%.02f", rr)+"%");
+        txtTotalEffectedRatio.setText(String.format("%.02f", er)+"%(of total Pop.)");
+        txtTotaldeathRatio.setText(String.format("%.02f", dr)+"%(of total cases)");
+        txtTotalrecoveredRatio.setText(String.format("%.02f", rr)+"%(of total cases)");
 
 //        for(int i =0;i < statList.size();i++)
 //        {

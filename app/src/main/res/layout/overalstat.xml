@@ -32,6 +32,7 @@
             android:layout_margin="30dp"
             android:layout_below="@+id/cardTitle"
             android:layout_height="match_parent">
+
             <RelativeLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
@@ -41,40 +42,44 @@
                     android:layout_width="15dp"
                     android:layout_height="15dp"
                     android:layout_alignParentBottom="true"
-                    android:layout_toLeftOf="@+id/totalEffected"
+                    android:layout_marginTop="5dp"
                     android:layout_marginRight="3dp"
-                    android:src="@drawable/ic_001_coronavirus"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:text="@string/confirmed"
-                    style="@style/statTitle"
-                    android:layout_alignParentBottom="true"
-                    android:layout_centerHorizontal="true"
-                    android:layout_height="wrap_content"
-                    android:textSize="10sp"
-                    android:id="@+id/totalEffected"
-                   />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="---"
-                    android:layout_centerHorizontal="true"
-                    android:textColor="@color/colorAccent"
-                    android:textSize="@dimen/stat_text_size_world"
-                    android:id="@+id/txtTotalEffected"
-                    android:textStyle="bold"
-                    android:layout_above="@id/txtTotalEffectedRatio"/>
+                    android:layout_toLeftOf="@+id/totalEffected"
+                    android:src="@drawable/ic_001_coronavirus" />
 
                 <TextView
+                    android:id="@+id/totalEffected"
+                    style="@style/statTitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
                     android:layout_centerHorizontal="true"
-                    android:text="---%"
+                    android:text="@string/confirmed"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/txtTotalEffected"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/txtTotalEffectedRatio"
+                    android:layout_centerHorizontal="true"
+                    android:text="---"
                     android:textColor="@color/colorAccent"
                     android:textSize="@dimen/stat_text_size_world"
+                    android:textStyle="bold" />
+
+                <TextView
                     android:id="@+id/txtTotalEffectedRatio"
-                    android:textStyle="bold"
-                    android:layout_above="@id/totalEffected"/>
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/totalEffected"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="5dp"
+                    android:text="---%"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="10sp"
+                    android:textStyle="bold" />
 
             </RelativeLayout>
             <RelativeLayout
@@ -114,16 +119,18 @@
                     android:id="@+id/txtTotaldeath"
                     android:textStyle="bold"
                     android:layout_above="@id/txtTotaldeathRatio"/>
+
                 <TextView
+                    android:id="@+id/txtTotaldeathRatio"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="---%"
-                    android:textSize="@dimen/stat_text_size_world"
-                    android:textColor="@color/bg_screen1"
+                    android:layout_above="@id/totalDeath"
                     android:layout_centerHorizontal="true"
-                    android:id="@+id/txtTotaldeathRatio"
-                    android:textStyle="bold"
-                    android:layout_above="@id/totalDeath"/>
+                    android:layout_marginBottom="8dp"
+                    android:text="---%"
+                    android:textColor="@color/bg_screen1"
+                    android:textSize="10sp"
+                    android:textStyle="bold" />
             </RelativeLayout>
 
             <RelativeLayout
@@ -164,16 +171,18 @@
                     android:id="@+id/txtTotalrecovered"
                     android:textStyle="bold"
                     android:layout_above="@id/txtTotalrecoveredRatio"/>
+
                 <TextView
+                    android:id="@+id/txtTotalrecoveredRatio"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="---%"
-                    android:textSize="@dimen/stat_text_size_world"
-                    android:textColor="@color/bg_screen2"
+                    android:layout_above="@id/totalRecovered"
                     android:layout_centerHorizontal="true"
-                    android:id="@+id/txtTotalrecoveredRatio"
-                    android:textStyle="bold"
-                    android:layout_above="@id/totalRecovered"/>
+                    android:layout_marginBottom="8dp"
+                    android:text="---%"
+                    android:textColor="@color/bg_screen2"
+                    android:textSize="10sp"
+                    android:textStyle="bold" />
             </RelativeLayout>
         </LinearLayout>
 <!--        -->

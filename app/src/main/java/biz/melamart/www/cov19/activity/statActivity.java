@@ -98,6 +98,30 @@ public class statActivity extends AppCompatActivity  implements statViewUpdateLi
     @BindView(R.id.r4c5)
     TextView r4c5;
 
+
+    @BindView(R.id.r5c1)
+    TextView r5c1;
+    @BindView(R.id.r5c2)
+    TextView r5c2;
+    @BindView(R.id.r5c3)
+    TextView r5c3;
+    @BindView(R.id.r5c4)
+    TextView r5c4;
+    @BindView(R.id.r5c5)
+    TextView r5c5;
+
+
+    @BindView(R.id.r6c1)
+    TextView r6c1;
+    @BindView(R.id.r6c2)
+    TextView r6c2;
+    @BindView(R.id.r6c3)
+    TextView r6c3;
+    @BindView(R.id.r6c4)
+    TextView r6c4;
+    @BindView(R.id.r6c5)
+    TextView r6c5;
+
     @BindView(R.id.swiperefresh)
     SwipeRefreshLayout mySwipeRefreshLayout;
 
@@ -209,23 +233,31 @@ public class statActivity extends AppCompatActivity  implements statViewUpdateLi
                 r2c5.setText( ninjaList.get(i).getRecovered()+"");
 
             }
-            else if( i == 2 )
-            {
+            else if( i == 2 ) {
 
                 r3c1.setText((i+1)+"");
                 r3c2.setText( ninjaList.get(i).getCountry());
                 r3c3.setText( ninjaList.get(i).getCases()+"");
                 r3c4.setText( ninjaList.get(i).getDeaths()+"");
                 r3c5.setText( ninjaList.get(i).getRecovered()+"");
-            }
-            else if (ninjaList.get(i).getCountry().toLowerCase().trim().equals("nepal"))
-            {
-
+            } else if (ninjaList.get(i).getCountry().toLowerCase().trim().equals("china")) {
                 r4c1.setText((i+1)+"");
                 r4c2.setText( ninjaList.get(i).getCountry());
                 r4c3.setText( ninjaList.get(i).getCases()+"");
                 r4c4.setText( ninjaList.get(i).getDeaths()+"");
                 r4c5.setText( ninjaList.get(i).getRecovered()+"");
+            } else if (ninjaList.get(i).getCountry().toLowerCase().trim().equals("india")) {
+                r5c1.setText((i+1)+"");
+                r5c2.setText( ninjaList.get(i).getCountry());
+                r5c3.setText( ninjaList.get(i).getCases()+"");
+                r5c4.setText( ninjaList.get(i).getDeaths()+"");
+                r5c5.setText( ninjaList.get(i).getRecovered()+"");
+            } else if (ninjaList.get(i).getCountry().toLowerCase().trim().equals("nepal")) {
+                r6c1.setText((i+1)+"");
+                r6c2.setText( ninjaList.get(i).getCountry());
+                r6c3.setText( ninjaList.get(i).getCases()+"");
+                r6c4.setText( ninjaList.get(i).getDeaths()+"");
+                r6c5.setText( ninjaList.get(i).getRecovered()+"");
             }
             totalCases = totalCases + ninjaList.get(i).getCases();
             totalDeath = totalDeath + ninjaList.get(i).getDeaths();
@@ -236,15 +268,15 @@ public class statActivity extends AppCompatActivity  implements statViewUpdateLi
         int totalInActiveCase = totalDeath + totalRecovered;
 
         float er = ((totalCases/ 7000000000f)*100);
-        float dr = ((Float.parseFloat(totalDeath+"")/ totalInActiveCase)*100f);
-        float rr = ((Float.parseFloat(totalRecovered+"")/ totalInActiveCase)*100f);
+        float dr = ((Float.parseFloat(totalDeath+"")/ totalCases)*100f);
+        float rr = ((Float.parseFloat(totalRecovered+"")/ totalCases)*100f);
 
         txtTotalEffected.setText(totalCases+"");
         txtTotaldeath.setText(totalDeath+"");
         txtTotalrecovered.setText(totalRecovered+"");
-        txtTotalEffectedRatio.setText(String.format("%.02f", er)+"%");
-        txtTotaldeathRatio.setText(String.format("%.02f", dr)+"%");
-        txtTotalrecoveredRatio.setText(String.format("%.02f", rr)+"%");
+        txtTotalEffectedRatio.setText(String.format("%.02f", er)+"%(of total Pop.)");
+        txtTotaldeathRatio.setText(String.format("%.02f", dr)+"%(of total cases)");
+        txtTotalrecoveredRatio.setText(String.format("%.02f", rr)+"%(of total cases)");
 
                         List<DataEntry> data = new ArrayList<>();
                 data.add(new ValueDataEntry("Death", dr));

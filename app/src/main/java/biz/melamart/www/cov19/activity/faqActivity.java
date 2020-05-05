@@ -64,20 +64,21 @@ public class faqActivity extends AppCompatActivity {
 
     public void getFaqList()
     {
+        faqList.clear();
         faq faqs = new faq();
         faqs.setFaqQuestion("What are the symptoms?");
         faqs.setFaqAnswer("High Temperature, sore throat, cough, difficulty breathing, muscle ache are the symptoms");
         faqList.add(faqs);
 
         faqs = new faq();
-        faqs.setFaqQuestion("Should i go to hospital as soon as i get symptoms?");
-        faqs.setFaqAnswer("No first you should qurantine yourself and see if your immunity heal itself. Dont rush to hospital.");
+        faqs.setFaqQuestion("Should I go to hospital as soon as I get symptoms?");
+        faqs.setFaqAnswer("No first you should quarantine yourself and see if your immunity heal itself. Do not rush to hospital.");
         faqList.add(faqs);
 
 
         faqs = new faq();
-        faqs.setFaqQuestion("How can i consult to doctor?");
-        faqs.setFaqAnswer("Use government provided number 1133 and 1125 to get consultation");
+        faqs.setFaqQuestion("How can I consult to doctor?");
+        faqs.setFaqAnswer("Use government provided hospital lists and try to get consultation");
         faqList.add(faqs);
 
 
