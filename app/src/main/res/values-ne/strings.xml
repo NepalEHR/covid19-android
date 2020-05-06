@@ -128,4 +128,9 @@
 
     <string name="splashTitle1">कोभिड 19: मानव जातिको लागि चुनौती</string>
     <string name="splashTitle2">सँगै हामी गर्न सक्छौं!!!</string>
+
+
+
+    <string name="statSubTitle1">कूल जनसंख्याको </string>
+    <string name="statSubTitle2">कूल  संक्रमितको </string>
 </resources>

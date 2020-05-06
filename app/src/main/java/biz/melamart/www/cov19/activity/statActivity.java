@@ -274,9 +274,10 @@ public class statActivity extends AppCompatActivity  implements statViewUpdateLi
         txtTotalEffected.setText(totalCases+"");
         txtTotaldeath.setText(totalDeath+"");
         txtTotalrecovered.setText(totalRecovered+"");
-        txtTotalEffectedRatio.setText(String.format("%.02f", er)+"%(of total Pop.)");
-        txtTotaldeathRatio.setText(String.format("%.02f", dr)+"%(of total cases)");
-        txtTotalrecoveredRatio.setText(String.format("%.02f", rr)+"%(of total cases)");
+
+        txtTotalEffectedRatio.setText(String.format("%.02f", er)+"%\n("+getResources().getString(R.string.statSubTitle1)+")");
+        txtTotaldeathRatio.setText(String.format("%.02f", dr)+"%\n("+getResources().getString(R.string.statSubTitle1)+")");
+        txtTotalrecoveredRatio.setText(String.format("%.02f", rr)+"%\n("+getResources().getString(R.string.statSubTitle1)+")");
 
                         List<DataEntry> data = new ArrayList<>();
                 data.add(new ValueDataEntry("Death", dr));

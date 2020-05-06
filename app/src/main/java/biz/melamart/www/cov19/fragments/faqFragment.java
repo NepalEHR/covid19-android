@@ -61,9 +61,9 @@ public class faqFragment extends Fragment  {
                 new SwipeRefreshLayout.OnRefreshListener() {
                     @Override
                     public void onRefresh() {
-                        mySwipeRefreshLayout.setRefreshing(true);
+                        mySwipeRefreshLayout.setRefreshing(false);
 
-                        getFaqList();
+//                        getFaqList();
                     }
                 }
         );
@@ -75,6 +75,7 @@ public class faqFragment extends Fragment  {
 
     public void getFaqList()
     {
+        faqList.clear();
         faq faqs = new faq();
         faqs.setFaqQuestion("What are the symptoms?");
         faqs.setFaqAnswer("High Temperature, sore throat, cough, difficulty breathing, muscle ache are the symptoms");

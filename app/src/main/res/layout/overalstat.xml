@@ -75,8 +75,9 @@
                     android:layout_above="@id/totalEffected"
                     android:layout_centerHorizontal="true"
                     android:layout_marginBottom="5dp"
+
+                    android:gravity="center"
                     android:text="---%"
-                    android:textAlignment="viewStart"
                     android:textColor="@color/colorAccent"
                     android:textSize="10sp"
                     android:textStyle="bold" />
@@ -128,6 +129,7 @@
                     android:layout_centerHorizontal="true"
                     android:layout_marginBottom="8dp"
                     android:text="---%"
+                    android:gravity="center"
                     android:textColor="@color/bg_screen1"
                     android:textSize="10sp"
                     android:textStyle="bold" />
@@ -180,6 +182,7 @@
                     android:layout_centerHorizontal="true"
                     android:layout_marginBottom="8dp"
                     android:text="---%"
+                    android:gravity="center"
                     android:textColor="@color/bg_screen2"
                     android:textSize="10sp"
                     android:textStyle="bold" />

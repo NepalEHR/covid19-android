@@ -128,4 +128,9 @@
 
     <string name="splashTitle1">COVID 19 : A Challenge for Human Being</string>
     <string name="splashTitle2">TOGETHER WE CAN!!!</string>
+
+
+
+    <string name="statSubTitle1">of total pop.</string>
+    <string name="statSubTitle2">of totalc cases</string>
 </resources>
