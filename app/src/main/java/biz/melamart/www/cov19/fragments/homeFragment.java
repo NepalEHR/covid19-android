@@ -194,8 +194,8 @@ public class homeFragment extends Fragment implements statViewUpdateListner {
         txtTotaldeath.setText(totalDeath+"");
         txtTotalrecovered.setText(totalRecovered+"");
         txtTotalEffectedRatio.setText(String.format("%.02f", er)+"%\n("+getResources().getString(R.string.statSubTitle1)+")");
-        txtTotaldeathRatio.setText(String.format("%.02f", dr)+"%\n("+getResources().getString(R.string.statSubTitle1)+")");
-        txtTotalrecoveredRatio.setText(String.format("%.02f", rr)+"%\n("+getResources().getString(R.string.statSubTitle1)+")");
+        txtTotaldeathRatio.setText(String.format("%.02f", dr)+"%\n("+getResources().getString(R.string.statSubTitle2)+")");
+        txtTotalrecoveredRatio.setText(String.format("%.02f", rr)+"%\n("+getResources().getString(R.string.statSubTitle2)+")");
 
 //        for(int i =0;i < statList.size();i++)
 //        {

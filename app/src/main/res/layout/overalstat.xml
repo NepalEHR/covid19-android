@@ -27,6 +27,12 @@
             android:textSize="16sp"
             android:id="@+id/cardTitle"
             android:textColor="@color/bg_screen2"/>
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="false"
+            android:src="@drawable/icons_arrow_right" />
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_margin="30dp"
@@ -186,7 +192,10 @@
                     android:textColor="@color/bg_screen2"
                     android:textSize="10sp"
                     android:textStyle="bold" />
+
+
             </RelativeLayout>
+
         </LinearLayout>
 <!--        -->
 <!--        <RelativeLayout-->
