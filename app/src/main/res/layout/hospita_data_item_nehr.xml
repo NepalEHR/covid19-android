@@ -193,7 +193,7 @@
                     android:src="@drawable/ic_screened"/>
                 <TextView
                     android:layout_width="wrap_content"
-                    android:text="Screened"
+                    android:text="Total Test"
                     style="@style/statTitle"
                     android:layout_centerHorizontal="true"
                     android:layout_alignParentBottom="true"
@@ -291,7 +291,42 @@
             </RelativeLayout>
 
 
-
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="3dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toLeftOf="@+id/totalWaiting"
+                    android:src="@drawable/ic_timer"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="Waiting"
+                    style="@style/statTitle"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_height="wrap_content"
+                    android:textSize="10sp"
+                    android:id="@+id/totalWaiting"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/waitingText"
+                    android:textColor="@color/white_fade"
+                    android:backgroundTint="@color/stat_screen4"
+                    style="@style/cardText"
+                    android:gravity="center"
+                    android:background="@drawable/circle_drawable"
+                    android:text="0"/>
+            </RelativeLayout>
 
         </LinearLayout>
 

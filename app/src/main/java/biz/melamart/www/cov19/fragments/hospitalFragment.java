@@ -148,10 +148,13 @@ public class hospitalFragment extends Fragment implements hospitalInterface {
             hosData.setHospitalName("Bayalpata Hospital");
             hosData.setDashUrl("http://covid19.nepalehr.org/public/dashboards/cjv44gAgY9NjWc1HzRQ0L3R5b3S8G6S4HqaACqMD?org_slug=default");
 
-            int total = extractData(nepalehr.getQueryResult().getData().getRows().get(0).getNumbers()) + extractData(nepalehr.getQueryResult().getData().getRows().get(1).getNumbers()) + extractData(nepalehr.getQueryResult().getData().getRows().get(2).getNumbers()) + extractData(nepalehr.getQueryResult().getData().getRows().get(3).getNumbers());
-            int positive = extractData(nepalehr.getQueryResult().getData().getRows().get(0).getNumbers()) + extractData(nepalehr.getQueryResult().getData().getRows().get(2).getNumbers());
-            int negative = extractData(nepalehr.getQueryResult().getData().getRows().get(1).getNumbers()) + extractData(nepalehr.getQueryResult().getData().getRows().get(3).getNumbers());
+//            int total = extractData(nepalehr.getQueryResult().getData().getRows().get(0).getNumbers()) + extractData(nepalehr.getQueryResult().getData().getRows().get(1).getNumbers()) + extractData(nepalehr.getQueryResult().getData().getRows().get(2).getNumbers()) + extractData(nepalehr.getQueryResult().getData().getRows().get(3).getNumbers());
 
+            int positive = extractData(nepalehr.getQueryResult().getData().getRows().get(0).getNumbers()) + extractData(nepalehr.getQueryResult().getData().getRows().get(3).getNumbers());
+
+            int negative = extractData(nepalehr.getQueryResult().getData().getRows().get(1).getNumbers()) + extractData(nepalehr.getQueryResult().getData().getRows().get(4).getNumbers());
+            int resultWaiting = extractData(nepalehr.getQueryResult().getData().getRows().get(2).getNumbers()) + extractData(nepalehr.getQueryResult().getData().getRows().get(5).getNumbers());
+            int total = positive + negative + resultWaiting;
 
 //            hosData.setScreened(extractData(nepalehr.getQueryResult().getData().getRows().get(0).getNumberOfScreenedPatient()));
 //            hosData.setUnIsoBed(extractData(nepalehr.getQueryResult().getData().getRows().get(0).getNumberOfUnOccupiedIsolationBeds()));
@@ -161,6 +164,8 @@ public class hospitalFragment extends Fragment implements hospitalInterface {
             hosData.setSuspect(total + "");
             hosData.setPositiveCase(positive + "");
             hosData.setNegativeCase(negative + "");
+            hosData.setResultWaiting(resultWaiting+"");
+
 
 
             hospitalDataList.add(hosData);
@@ -180,7 +185,7 @@ public class hospitalFragment extends Fragment implements hospitalInterface {
         return true;
     }
 
-    private int extractData(String response) {
+    private int extractData(String response ) {
         int data = 0;
 
         if (isInteger(response)) {
@@ -191,9 +196,14 @@ public class hospitalFragment extends Fragment implements hospitalInterface {
 
                 s = s.substring(0, s.indexOf("<"));
 
-                String[] tData = s.split("/");
-                data = Integer.parseInt(tData[1].trim());
-
+                if(isInteger(s.trim()))
+                {
+                    data = Integer.parseInt(s);
+                }
+                else {
+                    String[] tData = s.split("/");
+                    data = Integer.parseInt(tData[1].trim());
+                }
             } catch (Exception ex) {
 
             }
@@ -208,10 +218,12 @@ public class hospitalFragment extends Fragment implements hospitalInterface {
             hospitalData hosData = new hospitalData();
             hosData.setHospitalName("Charikot Hospital");
             hosData.setDashUrl("http://covid19.nepalehr.org/public/dashboards/mvUqhwzomnEDBeld4BgJqz3TNCN32adHmH72dbFx?org_slug=default");
-            int total = extractData(nepalehr.getQueryResult().getData().getRows().get(0).getNumbers()) + extractData(nepalehr.getQueryResult().getData().getRows().get(1).getNumbers()) + extractData(nepalehr.getQueryResult().getData().getRows().get(2).getNumbers()) + extractData(nepalehr.getQueryResult().getData().getRows().get(3).getNumbers());
-            int positive = extractData(nepalehr.getQueryResult().getData().getRows().get(0).getNumbers()) + extractData(nepalehr.getQueryResult().getData().getRows().get(2).getNumbers());
-            int negative = extractData(nepalehr.getQueryResult().getData().getRows().get(1).getNumbers()) + extractData(nepalehr.getQueryResult().getData().getRows().get(3).getNumbers());
 
+            int positive = extractData(nepalehr.getQueryResult().getData().getRows().get(0).getNumbers()) + extractData(nepalehr.getQueryResult().getData().getRows().get(3).getNumbers());
+
+            int negative = extractData(nepalehr.getQueryResult().getData().getRows().get(1).getNumbers()) + extractData(nepalehr.getQueryResult().getData().getRows().get(4).getNumbers());
+            int resultWaiting = extractData(nepalehr.getQueryResult().getData().getRows().get(2).getNumbers()) + extractData(nepalehr.getQueryResult().getData().getRows().get(5).getNumbers());
+            int total = positive + negative + resultWaiting;
 
 //            hosData.setScreened(extractData(nepalehr.getQueryResult().getData().getRows().get(0).getNumberOfScreenedPatient()));
 //            hosData.setUnIsoBed(extractData(nepalehr.getQueryResult().getData().getRows().get(0).getNumberOfUnOccupiedIsolationBeds()));
@@ -221,6 +233,7 @@ public class hospitalFragment extends Fragment implements hospitalInterface {
             hosData.setSuspect(total + "");
             hosData.setPositiveCase(positive + "");
             hosData.setNegativeCase(negative + "");
+            hosData.setResultWaiting(resultWaiting+"");
 
 
             hospitalDataList.add(hosData);
@@ -236,10 +249,12 @@ public class hospitalFragment extends Fragment implements hospitalInterface {
             hosData.setHospitalName("Chaurpati PHC");
             hosData.setDashUrl("http://covid19.nepalehr.org/public/dashboards/Yv3xoV5kb2JIJ677CaPRMRbXPZe755ALthnBFqVX?org_slug=default");
 
-            int total = extractData(nepalehr.getQueryResult().getData().getRows().get(0).getNumbers()) + extractData(nepalehr.getQueryResult().getData().getRows().get(1).getNumbers()) + extractData(nepalehr.getQueryResult().getData().getRows().get(2).getNumbers()) + extractData(nepalehr.getQueryResult().getData().getRows().get(3).getNumbers());
-            int positive = extractData(nepalehr.getQueryResult().getData().getRows().get(0).getNumbers()) + extractData(nepalehr.getQueryResult().getData().getRows().get(2).getNumbers());
-            int negative = extractData(nepalehr.getQueryResult().getData().getRows().get(1).getNumbers()) + extractData(nepalehr.getQueryResult().getData().getRows().get(3).getNumbers());
 
+            int positive = extractData(nepalehr.getQueryResult().getData().getRows().get(0).getNumbers()) + extractData(nepalehr.getQueryResult().getData().getRows().get(3).getNumbers());
+
+            int negative = extractData(nepalehr.getQueryResult().getData().getRows().get(1).getNumbers()) + extractData(nepalehr.getQueryResult().getData().getRows().get(4).getNumbers());
+            int resultWaiting = extractData(nepalehr.getQueryResult().getData().getRows().get(2).getNumbers()) + extractData(nepalehr.getQueryResult().getData().getRows().get(5).getNumbers());
+            int total = positive + negative + resultWaiting;
 
 //            hosData.setScreened(extractData(nepalehr.getQueryResult().getData().getRows().get(0).getNumberOfScreenedPatient()));
 //            hosData.setUnIsoBed(extractData(nepalehr.getQueryResult().getData().getRows().get(0).getNumberOfUnOccupiedIsolationBeds()));
@@ -249,6 +264,7 @@ public class hospitalFragment extends Fragment implements hospitalInterface {
             hosData.setSuspect(total + "");
             hosData.setPositiveCase(positive + "");
             hosData.setNegativeCase(negative + "");
+            hosData.setResultWaiting(resultWaiting+"");
 
 
             hospitalDataList.add(hosData);

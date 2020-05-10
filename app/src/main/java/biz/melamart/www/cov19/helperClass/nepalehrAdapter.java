@@ -21,7 +21,7 @@ public class nepalehrAdapter  extends RecyclerView.Adapter<nepalehrAdapter.MyVie
     private List<hospitalData> hospitalDataList;
     Context mContext;
     public class MyViewHolder extends RecyclerView.ViewHolder {
-        public TextView hospitalName, screenText,  positiveText,negativeText; //sampleText,suspectedText,
+        public TextView hospitalName, screenText,  positiveText,negativeText,waitingText; //sampleText,suspectedText,
         RelativeLayout hosRelative;
         //
 //,qurantineTotal,isolationText
@@ -35,7 +35,7 @@ public class nepalehrAdapter  extends RecyclerView.Adapter<nepalehrAdapter.MyVie
 
             positiveText = (TextView) view.findViewById(R.id.positiveText);
             negativeText = (TextView) view.findViewById(R.id.negativeText);
-
+            waitingText = (TextView)  view.findViewById(R.id.waitingText);
             hosRelative = (RelativeLayout) view.findViewById(R.id.hosRelative);
         }
     }
@@ -63,6 +63,7 @@ public class nepalehrAdapter  extends RecyclerView.Adapter<nepalehrAdapter.MyVie
 //        holder.sampleText.setText(hospitalData.getSamCol()+"");
         holder.positiveText.setText(hospitalData.getPositiveCase()+"");
         holder.negativeText.setText(hospitalData.getNegativeCase()+"");
+        holder.waitingText.setText(hospitalData.getResultWaiting()+"");
         holder.hosRelative.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

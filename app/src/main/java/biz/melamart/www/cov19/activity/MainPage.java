@@ -1,5 +1,8 @@
 package biz.melamart.www.cov19.activity;
 
+import android.app.AlertDialog;
+import android.app.Fragment;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.content.res.Resources;
@@ -7,12 +10,14 @@ import android.database.Cursor;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
 import android.provider.ContactsContract;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -43,7 +48,7 @@ import biz.melamart.www.cov19.utils.suspectDilouge;
 import static androidx.constraintlayout.widget.Constraints.TAG;
 
 
-public class MainPage extends AppCompatActivity  implements BottomNavigationView.OnNavigationItemSelectedListener, ViewUpdateListener {
+public class MainPage extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener, ViewUpdateListener {
     FragmentTransaction transaction;
     contactDilouge contactDilouge;
     suspectDilouge suspectDilouge;
@@ -53,6 +58,10 @@ public class MainPage extends AppCompatActivity  implements BottomNavigationView
     private LinearLayout layoutFabSave;
     private LinearLayout layoutFabEdit;
     private LinearLayout layoutFabLanguage;
+
+
+    boolean doubleBackToExitPressedOnce = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -70,7 +79,7 @@ public class MainPage extends AppCompatActivity  implements BottomNavigationView
         mView.setOnNavigationItemSelectedListener(MainPage.this);
 
         transaction = getSupportFragmentManager().beginTransaction();
-        transaction.replace(R.id.frame_container,  new homeFragment());
+        transaction.replace(R.id.frame_container, new homeFragment());
         transaction.addToBackStack(null);
         transaction.commit();
 
@@ -78,7 +87,7 @@ public class MainPage extends AppCompatActivity  implements BottomNavigationView
         fabSettings = (FloatingActionButton) this.findViewById(R.id.fabSetting);
 
         layoutFabSave = (LinearLayout) this.findViewById(R.id.layoutFabSave);
-         contactDilouge = new contactDilouge(MainPage.this);
+        contactDilouge = new contactDilouge(MainPage.this);
         layoutFabSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -103,10 +112,9 @@ public class MainPage extends AppCompatActivity  implements BottomNavigationView
             public void onClick(View view) {
                 COVSettings.getInstance().toggleLanguage();
 
-                String languageToLoad  = "en"; // your language
-                if(COVSettings.getInstance().getLanguage().trim().equals("Nepali"))
-                {
-                    languageToLoad  = "ne"; // your language
+                String languageToLoad = "en"; // your language
+                if (COVSettings.getInstance().getLanguage().trim().equals("Nepali")) {
+                    languageToLoad = "ne"; // your language
                 }
 
                 Resources res = getResources();
@@ -131,7 +139,7 @@ public class MainPage extends AppCompatActivity  implements BottomNavigationView
         fabSettings.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (fabExpanded == true){
+                if (fabExpanded == true) {
                     closeSubMenusFab();
                 } else {
                     openSubMenusFab();
@@ -145,7 +153,7 @@ public class MainPage extends AppCompatActivity  implements BottomNavigationView
 
 
     //closes FAB submenus
-    private void closeSubMenusFab(){
+    private void closeSubMenusFab() {
         layoutFabSave.setVisibility(View.INVISIBLE);
         layoutFabEdit.setVisibility(View.INVISIBLE);
         layoutFabLanguage.setVisibility(View.INVISIBLE);
@@ -154,7 +162,7 @@ public class MainPage extends AppCompatActivity  implements BottomNavigationView
     }
 
     //Opens FAB submenus
-    private void openSubMenusFab(){
+    private void openSubMenusFab() {
         layoutFabSave.setVisibility(View.VISIBLE);
         layoutFabEdit.setVisibility(View.VISIBLE);
         layoutFabLanguage.setVisibility(View.VISIBLE);
@@ -200,6 +208,51 @@ public class MainPage extends AppCompatActivity  implements BottomNavigationView
 
     }
 
+
+    @Override
+    public void onBackPressed() {
+
+        transaction = getSupportFragmentManager().beginTransaction();
+
+        transaction.replace(R.id.frame_container, new homeFragment());
+        transaction.addToBackStack(null);
+        transaction.commit();
+
+        if (doubleBackToExitPressedOnce) {
+            AlertDialog.Builder builder1 = new AlertDialog.Builder(MainPage.this);
+            builder1.setMessage("Are you sure you want to exit?");
+            builder1.setIcon(getDrawable(R.drawable.ic_no_virus));
+            builder1.setCancelable(false);
+
+            builder1.setPositiveButton(
+                    "Yes",
+                    new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int id) {
+                            Intent homeIntent = new Intent(Intent.ACTION_MAIN);
+                            homeIntent.addCategory(Intent.CATEGORY_HOME);
+                            homeIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                            startActivity(homeIntent);
+                            dialog.cancel();
+                        }
+                    });
+
+            builder1.setNegativeButton(
+                    "No",
+                    new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int id) {
+                            doubleBackToExitPressedOnce = false;
+                            dialog.cancel();
+                        }
+                    });
+
+            AlertDialog alert11 = builder1.create();
+            alert11.show();
+        } else {
+            doubleBackToExitPressedOnce = true;
+        }
+
+    }
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode,
                                     Intent intent) {
@@ -221,12 +274,13 @@ public class MainPage extends AppCompatActivity  implements BottomNavigationView
 
 
                 contactDilouge.show();
-                contactDilouge.updateData(name,number);
+                contactDilouge.updateData(name, number);
 //                Log.d(TAG, "ZZZ number : " + number + " , name : " + name);
-
 
 
             }
         }
-    };
+    }
+
+    ;
 }

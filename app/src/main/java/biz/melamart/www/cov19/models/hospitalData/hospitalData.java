@@ -3,7 +3,7 @@ package biz.melamart.www.cov19.models.hospitalData;
 public class hospitalData {
 
 String hospitalName,hospitalId,hospitalAddress;
-    String screened,positiveCase,negativeCase,qurantined,isolated,totalppe,usedppe;
+    String screened,positiveCase,negativeCase,qurantined,isolated,totalppe,usedppe,resultWaiting;
 
     String unIsoBed,samCol,ref,suspect;
 
@@ -145,5 +145,13 @@ String    dateUpdated;
 
     public void setStatus(Boolean status) {
         this.status = status;
+    }
+
+    public String getResultWaiting() {
+        return resultWaiting;
+    }
+
+    public void setResultWaiting(String resultWaiting) {
+        this.resultWaiting = resultWaiting;
     }
 }
